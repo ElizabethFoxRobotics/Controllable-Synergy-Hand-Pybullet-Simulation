@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf_1flex_assem.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.043461 -0.039545 0.0033132"
+        rpy="0 0 0" />
+      <mass
+        value="0.0066791" />
+      <inertia
+        ixx="3.2763E-07"
+        ixy="2.8997E-08"
+        ixz="4.039E-24"
+        iyy="4.3211E-07"
+        iyz="5.2507E-24"
+        izz="4.792E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="flexure_1">
+    <inertial>
+      <origin
+        xyz="-0.0041572 0.0027781 0.0039688"
+        rpy="0 0 0" />
+      <mass
+        value="0.00012601" />
+      <inertia
+        ixx="1.0041E-09"
+        ixy="4.7287E-10"
+        ixz="5.4893E-26"
+        iyy="1.3956E-09"
+        iyz="-5.6148E-26"
+        izz="1.0765E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/flexure_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/flexure_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flexure_1"
+    type="revolute">
+    <origin
+      xyz="0.032256 -0.0033132 -0.02953"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="flexure_1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="flexure_2">
+    <inertial>
+      <origin
+        xyz="-0.0041572 0.0027781 0.0039688"
+        rpy="0 0 0" />
+      <mass
+        value="0.00012601" />
+      <inertia
+        ixx="1.0041E-09"
+        ixy="4.7287E-10"
+        ixz="1.933E-25"
+        iyy="1.3956E-09"
+        iyz="-1.0663E-25"
+        izz="1.0765E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/flexure_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/flexure_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flexure_2"
+    type="revolute">
+    <origin
+      xyz="-0.0083143 0.0055563 -0.0079375"
+      rpy="0 0 -1.9634" />
+    <parent
+      link="flexure_1" />
+    <child
+      link="flexure_2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="top_link">
+    <inertial>
+      <origin
+        xyz="0.011205 0.0026844 4.3368E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.0066791" />
+      <inertia
+        ixx="3.2763E-07"
+        ixy="2.8997E-08"
+        ixz="-2.2859E-24"
+        iyy="4.3211E-07"
+        iyz="-1.7436E-23"
+        izz="4.792E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/top_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_1flex_assem.SLDASM/meshes/top_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="top_link"
+    type="revolute">
+    <origin
+      xyz="-0.020048 0.00069772 0.0079375"
+      rpy="3.1416 0 1.9634" />
+    <parent
+      link="flexure_2" />
+    <child
+      link="top_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

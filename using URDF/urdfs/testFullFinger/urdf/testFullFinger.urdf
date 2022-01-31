@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="testFullFinger">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0434608497940939 -0.0395453442948904 0.00331322186906391"
+        rpy="0 0 0" />
+      <mass
+        value="0.00667905021420444" />
+      <inertia
+        ixx="3.27627079841824E-07"
+        ixy="2.89965033003688E-08"
+        ixz="4.15032662394069E-24"
+        iyy="4.32111295614106E-07"
+        iyz="5.18743797146498E-24"
+        izz="4.79200873099411E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="prox_flexa">
+    <inertial>
+      <origin
+        xyz="-0.00415716507783549 0.002778125 0.00396875"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001260078125" />
+      <inertia
+        ixx="1.00405079022647E-09"
+        ixy="4.72868184625996E-10"
+        ixz="5.48927703902047E-26"
+        iyy="1.39564166287819E-09"
+        iyz="-5.61483003706636E-26"
+        izz="1.07652838551839E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/prox_flexa.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/prox_flexa.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p1"
+    type="continuous">
+    <origin
+      xyz="0.032256 -0.0033132 -0.02953"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prox_flexa" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="prox_flexb">
+    <inertial>
+      <origin
+        xyz="-0.00415716507783549 0.00277812499999999 -0.00396875"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001260078125" />
+      <inertia
+        ixx="1.00405079022647E-09"
+        ixy="4.72868184625996E-10"
+        ixz="1.93300848556864E-25"
+        iyy="1.39564166287819E-09"
+        iyz="-1.06633802984066E-25"
+        izz="1.07652838551839E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/prox_flexb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/prox_flexb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p2"
+    type="continuous">
+    <origin
+      xyz="-0.0083143 0.0055563 0"
+      rpy="0 0 -1.9634" />
+    <parent
+      link="prox_flexa" />
+    <child
+      link="prox_flexb" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="prox_link">
+    <inertial>
+      <origin
+        xyz="0.010907 0.0127 0.0079375"
+        rpy="0 0 0" />
+      <mass
+        value="0.0086212" />
+      <inertia
+        ixx="5.8836E-07"
+        ixy="4.7563E-23"
+        ixz="-1.0328E-24"
+        iyy="5.4468E-07"
+        iyz="2.6272E-23"
+        izz="7.7093E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/prox_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/prox_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p3"
+    type="continuous">
+    <origin
+      xyz="-0.0083143 0.0055562 -0.0079375"
+      rpy="0 0 1.9634" />
+    <parent
+      link="prox_flexb" />
+    <child
+      link="prox_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="mid_flexa">
+    <inertial>
+      <origin
+        xyz="-0.00415716507783549 0.002778125 0.00396875"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001260078125" />
+      <inertia
+        ixx="1.00405079022647E-09"
+        ixy="4.72868184625996E-10"
+        ixz="9.86644111378024E-26"
+        iyy="1.39564166287819E-09"
+        iyz="-1.5439307957947E-25"
+        izz="1.07652838551839E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/mid_flexa.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/mid_flexa.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m1"
+    type="continuous">
+    <origin
+      xyz="0 0.0254 0.0079375"
+      rpy="0 0 0" />
+    <parent
+      link="prox_link" />
+    <child
+      link="mid_flexa" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="mid_flexb">
+    <inertial>
+      <origin
+        xyz="-0.00415716507783549 0.002778125 -0.00396875"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001260078125" />
+      <inertia
+        ixx="1.00405079022647E-09"
+        ixy="4.72868184625996E-10"
+        ixz="1.37379584376573E-25"
+        iyy="1.39564166287819E-09"
+        iyz="-8.1339086796441E-26"
+        izz="1.07652838551839E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/mid_flexb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/mid_flexb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m2"
+    type="continuous">
+    <origin
+      xyz="-0.0083143 0.0055563 0"
+      rpy="0 0 -1.9634" />
+    <parent
+      link="mid_flexa" />
+    <child
+      link="mid_flexb" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="mid_link">
+    <inertial>
+      <origin
+        xyz="0.0109069402030736 0.0127 0.0079375"
+        rpy="0 0 0" />
+      <mass
+        value="0.00862121474090887" />
+      <inertia
+        ixx="5.8836084964385E-07"
+        ixy="8.92353927063774E-23"
+        ixz="2.10026327406042E-23"
+        iyy="5.44679150672075E-07"
+        iyz="-5.35643405356259E-25"
+        izz="7.70926530117698E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/mid_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/mid_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="m3"
+    type="continuous">
+    <origin
+      xyz="-0.00831433015567099 0.00555625 -0.0079375"
+      rpy="0 0 1.96336367021993" />
+    <parent
+      link="mid_flexb" />
+    <child
+      link="mid_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="dist_flexa">
+    <inertial>
+      <origin
+        xyz="-0.0041571650778355 0.002778125 0.00396875"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001260078125" />
+      <inertia
+        ixx="1.00405079022647E-09"
+        ixy="4.72868184625996E-10"
+        ixz="5.48927703902048E-26"
+        iyy="1.39564166287819E-09"
+        iyz="-1.09912852412367E-25"
+        izz="1.07652838551839E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/dist_flexa.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/dist_flexa.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="d1"
+    type="continuous">
+    <origin
+      xyz="0 0.0254 0.0079375"
+      rpy="0 0 0" />
+    <parent
+      link="mid_link" />
+    <child
+      link="dist_flexa" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="dist_flexb">
+    <inertial>
+      <origin
+        xyz="-0.0041571650778355 0.002778125 -0.00396875"
+        rpy="0 0 0" />
+      <mass
+        value="0.0001260078125" />
+      <inertia
+        ixx="1.00405079022647E-09"
+        ixy="4.72868184625995E-10"
+        ixz="2.20681356627665E-25"
+        iyy="1.39564166287819E-09"
+        iyz="-1.53091639842648E-25"
+        izz="1.07652838551839E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/dist_flexb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/dist_flexb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="d2"
+    type="continuous">
+    <origin
+      xyz="-0.00831433015567099 0.00555624999999999 0"
+      rpy="0 0 -1.96336367021993" />
+    <parent
+      link="dist_flexa" />
+    <child
+      link="dist_flexb" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="dist_link">
+    <inertial>
+      <origin
+        xyz="0.00999855726971256 0.0118562944688803 0.0079375"
+        rpy="0 0 0" />
+      <mass
+        value="0.00770001963670102" />
+      <inertia
+        ixx="5.03930172257717E-07"
+        ixy="4.2901268916097E-08"
+        ixz="2.62719737380806E-23"
+        iyy="4.50269705001729E-07"
+        iyz="-8.40721902908941E-24"
+        izz="6.30779000383533E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/dist_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testFullFinger/meshes/dist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="d3"
+    type="continuous">
+    <origin
+      xyz="-0.00831433015567099 0.00555624999999999 -0.0079375"
+      rpy="0 0 1.96336367021993" />
+    <parent
+      link="dist_flexb" />
+    <child
+      link="dist_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
